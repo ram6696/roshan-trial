@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./public /main.css" type="text/css" />
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyDAqv_2aQ7Z4agyzVd1ysnTWU5Rjnb5kqQ",
+        authDomain: "new-project-test-b8f76.firebaseapp.com",
+        databaseURL: "https://new-project-test-b8f76.firebaseio.com",
+        projectId: "new-project-test-b8f76",
+        storageBucket: "new-project-test-b8f76.appspot.com",
+        messagingSenderId: "702583690935",
+        appId: "1:702583690935:web:a59214c3f1764026c1df32",
+        measurementId: "G-NWKL0E8N5G"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+      const auth = firebase.auth();
+    </script>
+    <script lang="text/javascript" src="sigin.js">
+    
+    </script>
+  </head>
+  <body>
+    <form action="#" method="POST">
+      <div class="container" id="accountType">
+        <h1>Login In</h1>
+                <hr />
+
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Enter Email" name="email" required />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+
+        <button id='loginBtn' type="button" class="registerbtn" onclick="userSignIn(this.form)">
+          Login
+        </button>
+      </div>
+    </form>
+  </body>
+</html>
